@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlpineJS Bootcamp Widgets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.12.3/cdn.min.js" defer></script>
+<script src="script.js" defer></script>
+
+<body>
+    <h1>Alpine Bootcamp Functions Widgets</h1>
+
+    <div class="widget-container">
+        <!-- Greet Function Widget -->
+        <h2>Greet Function Widget</h2>
+        <input type="text" id="neighborName" placeholder="Enter neighbor's name">
+        <select id="language">
+            <option value="en">English</option>
+            <option value="sp">Spanish</option>
+            <option value="ru">Russian</option>
+            <option value="fr">French</option>
+        </select>
+        <button onclick="showGreeting()">Greet</button>
+        <p id="greeting"></p>
+
+        <!-- Transport Fee Widget -->
+        <h2>Transport Fee Widget</h2>
+        <div class="radio-label">
+            <input type="radio" name="shift" value="morning" onclick="transportFee('morning')"> Morning
+        </div>
+        <div class="radio-label">
+            <input type="radio" name="shift" value="afternoon" onclick="transportFee('afternoon')"> Afternoon
+        </div>
+        <div class="radio-label">
+            <input type="radio" name="shift" value="night" onclick="transportFee('night')"> Night
+        </div>
+        <p id="feeDisplay"></p>
+
+        <!-- Total Phone Bill Widget -->
+        <h2>Total Phone Bill Widget</h2>
+        <input type="number" id="callCount" placeholder="Enter number of calls">
+        <input type="number" id="smsCount" placeholder="Enter number of SMS">
+        <button onclick="showTotalPhoneBill()">Calculate Total Bill</button>
+        <p id="totalBill">Total Phone Bill: R0.00</p>
+
+        <!-- Airtime Remaining Widget -->
+        <h2>Airtime Remaining Widget</h2>
+        <p>Projected Usage: <input type="text" id="projectedUsage" placeholder="Enter usage (e.g., call, data, sms)"></p>
+        <p>Available Airtime: <input type="number" step="0.01" id="availableAirtime" placeholder="Enter available airtime (e.g., 100.50)"></p>
+        <button onclick="calculateAirtime()">Calculate Remaining Airtime</button>
+        <p id="remainingAirtimeDisplay"></p>
+    </div>
+</body>
+
+</html>
